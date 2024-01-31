@@ -1,3 +1,14 @@
+# Simple Python project that displays the bustop schedule on the output console.
+# This Project utilizes the API and data from Digitransit (© Digitransit 2024).
+#
+# Digitransit Platform, an open-source journey planning solution, amalgamates 
+# various open-source components for route planning. It features a mobile-friendly 
+# user interface, map tile serving, geocoding, and data conversion tools. 
+# Route planning algorithms and APIs are powered by Open Trip Planner (OTP). 
+# For more information about Digitransit, visit: https://digitransit.fi/en/. 
+# Digitransit is supported by Helsinki Region Transportation (HSL), Fintraffic, 
+# and Waltti Solutions Oy.
+
 import json
 from datetime import datetime, timedelta
 import time
@@ -7,7 +18,7 @@ import pytz
 import os
 import urllib.request
 
-
+# Function that returns converts the UNIX date and time to Heksinki timezone
 def convert_date_time(unix_date,unix_time):
   utc = pytz.utc
   fmt = '%a %d-%b-%Y'
@@ -66,17 +77,17 @@ def main():
 
   # Convert payload to JSON
   data = json.dumps(payload).encode('utf-8')
-
   req = urllib.request.Request(api_endpoint, data=data, headers=hdr, method='POST')
-
   response = urllib.request.urlopen(req)
 
+  # Perform action only if status code = 200
   if response.status == 200:
     json_response = response.read().decode('utf-8')
     parsed_response = json.loads(json_response)
 
     try:
       table = PrettyTable()
+      # Create the table headers
       table.field_names = ['Service Day', 'Route Number', 'Scheduled arrival', 'Real time arrival', 'Delay']
 
       for index in range(5):
@@ -90,13 +101,16 @@ def main():
         realArrivalDate, realArrivalTime =  convert_date_time(schArrival_Date,realArrival_time)
         delayDate, delayTime = convert_date_time(schArrival_Date,abs(delay_time))
 
+        # If UNIX delay time is -ve
         if delay_time < 0:
           table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Early')])
+        # If UNIX delay time is 0 or if there is no delay
         elif delay_time == 0:
           table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, delayTime])
+        # If UNIX delay time is +ve
         else:
           table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Late')])
-      print(table)
+      print(table) # Prints the table
 
     except Exception as e:
       print(e)
@@ -105,6 +119,6 @@ def main():
 
 if __name__ == "__main__":
   while True:
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear') # Clears the output console
     main()
-    time.sleep(60)
+    time.sleep(60) # Loops over the main() function every 60s
