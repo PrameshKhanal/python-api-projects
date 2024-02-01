@@ -52,7 +52,7 @@ def main():
   '''
   # Variable values
   variables = {
-    "stopName": "V6110"
+    "stopName": "V6110" # V6110 is the stop ID and can be modified according to need
   }
 
   # Request payload
@@ -110,7 +110,7 @@ def main():
         # If UNIX delay time is +ve
         else:
           table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Late')])
-      print(table) # Prints the table
+      print(f'{datetime.now().strftime("%H:%M:%S")}\n{table}') # Prints the current time and the schedule table
 
     except Exception as e:
       print(e)
@@ -121,4 +121,4 @@ if __name__ == "__main__":
   while True:
     os.system('cls' if os.name == 'nt' else 'clear') # Clears the output console
     main()
-    time.sleep(60) # Loops over the main() function every 60s
+    time.sleep(3) # Loops over the main() function every 3s
