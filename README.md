@@ -2,7 +2,7 @@
 ## Table of Contents
 * [Introduction](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#introduction)
 * [Modules, Libraries and Installations](https://github.com/PrameshKhanal/python-api-projects#modules-libraries-and-installations)
-* [HSL API - Stop Schedule Display]()
+* [HSL API - Stop Schedule Display](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#hsl-api---stop-schedule-display)
 ## Introduction
 ### 🚀 API Fun Projects
 
