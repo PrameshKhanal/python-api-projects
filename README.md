@@ -1,5 +1,5 @@
 # Python API Projects
-## Table of Contents
+## [Table of Contents](#-table-of-contents)
 * [Introduction](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#introduction)
 * [Libraries and Installations](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#libraries-and-installations)
 ## Introduction
@@ -19,11 +19,47 @@ Welcome to my API Fun Projects repository! Here, I create small Python projects 
 * Explore, add your own touch, or share your ideas.
 * I'd love to hear your thoughts and ideas to make these projects even better.
 
-### 📚 Read the Docs:
-* Look at the documentation in each subfolder to learn more about each project.
-* For a complete guide and how to use each project, check the README file in each project's folder.
-
 ### 🚧 Still Building:
 * This repository is always changing as I add new projects. Keep an eye out for updates!
   
-## Libraries and Installations
+## Modules, Libraries and Installations
+
+- **json**
+  - **Official Link:** [json - Python Standard Library](https://docs.python.org/3/library/json.html)
+  - **Installation:**
+
+    Python has a built-in package called _json_, which can be used to work with JSON data
+
+- **datetime, timedelta, time**
+  - **Official Link:** [datetime - Python Standard Library](https://docs.python.org/3/library/datetime.html)
+  - **Installation:**
+
+    Python has a module named _datetime_ to work with dates and times
+
+- **pytz**
+  - **Official Link:** [pytz - World Timezone Definitions for Python](https://pypi.org/project/pytz/)
+  - **Installation:**
+    ```bash
+    pip install pytz
+    ```
+
+- **PrettyTable**
+  - **Official Link:** [PrettyTable - A Simple Python Library for Table Representation](https://github.com/jazzband/prettytable)
+  - **Installation:**
+    ```bash
+    python -m pip install -U prettytable
+    ```
+
+- **os**
+  - **Official Link:** [os - Python Standard Library](https://docs.python.org/3/library/os.html)
+  - **Installation:**
+  
+    Built-in _os_ module
+
+- **urllib.request**
+  - **Official Link:** [urllib.request - Python Standard Library](https://docs.python.org/3/library/urllib.request.html)
+  - **Installation:**
+    ```bash
+    pip install urllib
+    ```
+[🔝 Back to Top](#-table-of-contents)
