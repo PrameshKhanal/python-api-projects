@@ -1,15 +1,14 @@
-#=================================================================================|
-# Simple Python project that displays the bustop schedule on the output console.  |
-# This Project utilizes the API and data from Digitransit (© Digitransit 2024).   |
-#                                                                                 |
-# Digitransit Platform, an open-source journey planning solution, amalgamates     |
-# various open-source components for route planning. It features a mobile-friendly| 
-# user interface, map tile serving, geocoding, and data conversion tools.         |
-# Route planning algorithms and APIs are powered by Open Trip Planner (OTP).      |
-# For more information about Digitransit, visit: https://digitransit.fi/en/.      |
-# Digitransit is supported by Helsinki Region Transportation (HSL), Fintraffic,   | 
-# and Waltti Solutions Oy.                                                        |
-#=================================================================================|
+#========================================================================================================================================#
+# Simple Python project that displays the bustop schedule on the output console. This Project utilizes the API and data from             #
+# Digitransit (© Digitransit 2024).                                                                                                      #
+#                                                                                                                                        #
+# Digitransit Platform, an open-source journey planning solution, amalgamates various open-source components for route planning.         #
+# It features a mobile-friendly user interface, map tile serving, geocoding, and data conversion tools.                                  # 
+# Route planning algorithms and APIs are powered by Open Trip Planner (OTP). For more information about Digitransit,                     #
+# visit: https://digitransit.fi/en/. Digitransit is supported by Helsinki Region Transportation (HSL), Fintraffic,and Waltti Solutions   #
+# Oy                                                                                                                                     #
+#========================================================================================================================================#
+
 
 import json
 from datetime import datetime, timedelta
