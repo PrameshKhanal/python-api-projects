@@ -1,5 +1,5 @@
 # Python API Projects
-## [Table of Contents](#-table-of-contents)
+## Table of Contents
 * [Introduction](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#introduction)
 * [Libraries and Installations](https://github.com/PrameshKhanal/python-api-projects/blob/main/README.md#libraries-and-installations)
 ## Introduction
@@ -21,6 +21,8 @@ Welcome to my API Fun Projects repository! Here, I create small Python projects 
 
 ### 🚧 Still Building:
 * This repository is always changing as I add new projects. Keep an eye out for updates!
+
+[Back to Top](#table-of-contents)
   
 ## Modules, Libraries and Installations
 
@@ -62,4 +64,4 @@ Welcome to my API Fun Projects repository! Here, I create small Python projects 
     ```bash
     pip install urllib
     ```
-[🔝 Back to Top](#-table-of-contents)
+[Back to Top](#table-of-contents)
