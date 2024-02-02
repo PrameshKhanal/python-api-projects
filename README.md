@@ -6,7 +6,7 @@
 ## Introduction
 ### 🚀 API Fun Projects
 
-Welcome to my API Fun Projects repository! Here, I create small Python projects using different public APIs. From creating your own public transportation information (using Digitransit API) to checking the weather, each project is a cool way to play with information available online.
+Welcome to my API Fun Projects repository! Here, I create small Python projects using different public APIs.
 
 ### 🔍 Explore the Subfolders:
 * Each subfolder has a different project, showing how to use APIs in Python.
