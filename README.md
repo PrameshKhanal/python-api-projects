@@ -72,7 +72,8 @@ The Python program utilizes the Digitransit's [Routing API](https://digitransit.
 
 
 ### Program output | [VIEW FILE](https://github.com/PrameshKhanal/python-api-projects/blob/main/HSL%20API%20-%20Stop%20Schedule%20Display/HSL_stops_schedule.py)
-* `Route Number`: displays the bus/train/tram numbers for a stop (in this case `V6110` stop)
+* `stoptimesWithoutPatterns(numberOfDepartures: 5)`: 5 departures will be displayed in the output
+* `Route Number`: displays the bus/train/tram numbers for a stop (in this case `V6110` stop; bus numbers 570 and 576)
 * `Scheduled arrival`: displays the secheduled arrival time
 * `Real time arrival`: displays the real time arrival at the stop
 * `Delay`: displays the delay based on the `Scheduled` and `Real time` arrivals
