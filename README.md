@@ -76,8 +76,10 @@ The Python program utilizes the Digitransit's [Routing API](https://digitransit.
 * `Route Number`: displays the bus/train/tram numbers for a stop (in this case `V6110` stop; bus numbers 570 and 576)
 * `Scheduled arrival`: displays the secheduled arrival time
 * `Real time arrival`: displays the real time arrival at the stop
-* `Delay`: displays the delay based on the `Scheduled` and `Real time` arrivals
+* `Status`: displays the delay based on the `Scheduled` and `Real time` arrivals
+* `Direction`: displays the vehicle's head sign/route name
 
-![schedule_display](https://github.com/PrameshKhanal/python-api-projects/assets/7952696/b5def655-de96-47bb-aceb-70707d2b216b)
+![Stop Schedule](https://github.com/PrameshKhanal/python-api-projects/assets/7952696/d03e0079-3814-4ae1-a0a4-bf5baccc68c5)
+
 
 [Back to Top](#table-of-contents)
