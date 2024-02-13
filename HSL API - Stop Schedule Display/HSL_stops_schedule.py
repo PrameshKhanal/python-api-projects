@@ -89,7 +89,7 @@ def main():
     try:
       table = PrettyTable()
       # Create the table headers
-      table.field_names = ['Service Day', 'Route Number', 'Scheduled arrival', 'Real time arrival', 'Delay']
+      table.field_names = ['Service Day', 'Route Number', 'Scheduled arrival', 'Real time arrival', 'Status', 'Direction']
 
       for index in range(5):
         schArrival_Date  = parsed_response['data']['stops'][0]['stoptimesWithoutPatterns'][index]['serviceDay']
@@ -97,6 +97,7 @@ def main():
         realArrival_time = parsed_response['data']['stops'][0]['stoptimesWithoutPatterns'][index]['realtimeArrival']
         delay_time       = parsed_response['data']['stops'][0]['stoptimesWithoutPatterns'][index]['arrivalDelay']
         route_number     = parsed_response['data']['stops'][0]['stoptimesWithoutPatterns'][index]['trip']['route']['shortName']
+        headsign         = parsed_response['data']['stops'][0]['stoptimesWithoutPatterns'][index]['headsign']
 
         schArrivalDate, schArrivalTime   = convert_date_time(schArrival_Date,schArrival_time)
         realArrivalDate, realArrivalTime =  convert_date_time(schArrival_Date,realArrival_time)
@@ -104,13 +105,13 @@ def main():
 
         # If UNIX delay time is -ve
         if delay_time < 0:
-          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Early')])
+          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Early'), headsign])
         # If UNIX delay time is 0 or if there is no delay
         elif delay_time == 0:
-          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, delayTime])
+          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, delayTime], headsign)
         # If UNIX delay time is +ve
         else:
-          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Late')])
+          table.add_row([schArrivalDate, route_number, schArrivalTime, realArrivalTime, (delayTime + ' Late'), headsign])
       print(f'{datetime.now().strftime("%H:%M:%S")}\n{table}') # Prints the current time and the schedule table
 
     except Exception as e:
